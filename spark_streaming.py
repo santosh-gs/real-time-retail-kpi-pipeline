@@ -5,6 +5,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from pyspark.sql.window import Window
 
+
 # SparkSession 
 spark = SparkSession  \
     .builder  \
@@ -19,9 +20,11 @@ spark.sparkContext.setLogLevel('ERROR')
 def is_a_order(type):
    return 1 if type == 'ORDER' else 0
 
+
 #Checking Return order
 def is_a_return(type):
    return 1 if type == 'RETURN' else 0
+
 
 # Calculating Total Item  
 def total_item_count(items):
